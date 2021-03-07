@@ -1,0 +1,156 @@
+* {
+  box-sizing: inherit;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  max-height: 27rem;
+}
+.canary-head {
+  font-family: "Varela Round", sans-serif;
+  background-image: url("../../assets/Ovall.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding: 8vmin;
+}
+
+.company-logo img {
+  position: relative;
+  top: -2rem;
+  left: 158px;
+}
+
+h2 {
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+/* ---------- ALIGN ---------- */
+.align {
+  display: grid;
+  place-items: center;
+}
+
+/* ---------- BUTTON ---------- */
+
+.button {
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    rgb(39, 143, 255) 0%,
+    rgb(12, 99, 250) 100%
+  );
+  transition: all 0.3s ease;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+}
+
+/* ---------- login ---------- */
+
+.login__header {
+  background-color: #fff;
+  border-top-left-radius: 1.25em;
+  border-top-right-radius: 1.25em;
+  border-bottom-left-radius: 1.25em;
+  border-bottom-right-radius: 1.25em;
+  color: #4158d0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
+  width: 450px;
+  height: 480px;
+  margin: 0 auto;
+  padding: 10px;
+  min-width: none;
+  position: relative;
+  left: -15px;
+  top: -2rem;
+  box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.login__form {
+  display: grid;
+  border: none;
+}
+
+.login input {
+  border-radius: 0.1877em;
+  min-height: 48px;
+  min-width: 18rem;
+  border: none;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+  color: #777;
+  border: none;
+  padding: 0.25em 0.625em;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+.login input[type="email"],
+.login input[type="password"]:focus {
+  outline: none !important;
+}
+
+.login input[type="submit"] {
+  display: block;
+  outline: none;
+  border: none;
+  border-radius: 4rem;
+  margin: 0 auto;
+  width: 100%;
+}
+.login input[type="submit"]:hover {
+  border-color: #20b8eb;
+  box-shadow: 0 0 10px #20b8eb;
+  background: #20b8eb;
+}
+a {
+  text-decoration: none;
+  text-align: center;
+  color: #4158d0;
+  font-weight: bold;
+}
+
+label {
+  color: black;
+  opacity: 0.5;
+  line-height: 240%;
+}
+
+.input-head {
+  border: none;
+  outline: 0;
+}
+
+.forgot-pwd {
+  color: #4158d0;
+}
+.signup-link {
+  color: black;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.content {
+  color: #4158d0;
+  margin-top: -4%;
+}
+.pass-link {
+  color: #4158d0;
+}
+@media only screen and (max-width: 540px) {
+  .company-logo img {
+    position: relative;
+    left: -1rem;
+  }
+}
