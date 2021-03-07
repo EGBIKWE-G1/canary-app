@@ -197,7 +197,7 @@ form .signup-link a {
   opacity: 0.5;
 }
 
-.footer {
+.footer-registration {
   height: 5vh;
   background: #20b8eb;
   width: 100%;
@@ -210,5 +210,8 @@ form .signup-link a {
   .company-logo img {
     position: relative;
     left: -1rem;
+  }
+  form .content .checkbox {
+    margin-left: -10px;
   }
 }

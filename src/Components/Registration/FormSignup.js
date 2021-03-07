@@ -134,8 +134,8 @@ const FormSignup = ({ submitForm }) => {
     </div>
     <br />
     <br />
-     <hr />
-    <div className="footer">
+     
+    <div className="footer-registration">
 
     </div>
     </div>

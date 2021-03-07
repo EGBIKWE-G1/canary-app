@@ -58,8 +58,9 @@ class Forgotpwd extends React.Component{
         <br />
         <br />
         <br />
-         <hr />
-    <div className="footer">
+        
+         {/* <hr /> */}
+    <div className="footer-forgotpwd">
 
     </div>
         </div>

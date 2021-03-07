@@ -8,7 +8,7 @@ class Login extends React.Component{
     state={    
         email:'',
         pwd:''
-    }
+    }  
    
     handleChange = (e) =>{
         const {name,value} = e.target   
@@ -74,8 +74,7 @@ class Login extends React.Component{
             </div>
             </div>
         
-             <hr />
-    <div className="footer">
+    <div className="footer-login">
 
     </div>
             </div>
