@@ -16,10 +16,10 @@ body {
   padding: 8vmin;
 }
 
-.company-logo img {
+.company-logo {
   position: relative;
-  top: -2rem;
-  left: 158px;
+  /* top: -2rem; */
+  left: 14px;
 }
 
 h2 {
@@ -157,19 +157,9 @@ label {
 }
 
 @media only screen and (max-width: 540px) {
-  .company-logo img {
+  .company-logo {
     position: relative;
-    left: -1rem;
-  }
-
-  .canary-head {
-    font-family: "Varela Round", sans-serif;
-    background-image: url("../../assets/Ovall.png");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center top;
-    padding: 8vmin;
-    /* width: 530px; */
+    left: 2.8rem;
   }
 
   .login__header {
