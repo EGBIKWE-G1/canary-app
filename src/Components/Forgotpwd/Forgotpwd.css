@@ -25,7 +25,7 @@ input {
 
 /* ---------- logins ---------- */
 .logins {
-  width: 400px;
+  /* width: 400px; */
 }
 
 .logins__header {
@@ -60,6 +60,12 @@ input {
   min-height: 48px;
   border: none;
   min-width: 20rem;
+}
+.button-head {
+  /* min-width: 20rem; */
+}
+.button {
+  /* min-width: 17rem; */
 }
 
 .logins input[type="email"],
@@ -141,7 +147,7 @@ label {
       "Segoe UI Symbol", sans-serif;
     /* width: 400px; */
     position: relative;
-    left: -27px;
+    /* left: -27px; */
     width: 350px;
     height: 370px;
     margin: 0 auto;
@@ -150,14 +156,26 @@ label {
     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.1);
   }
 
+  /* .logins input {
+    border-radius: 0.1875em;
+    min-height: 48px;
+    border: none;
+    min-width: 4rem;
+  } */
+  .button {
+    /* min-width: 30rem; */
+  }
   .logins__form {
     color: #777;
     display: grid;
     border: none;
     gap: 0.875em;
     margin-left: -5%;
-    padding: 1.25em 1.625em;
-    /* padding: 30px; */
+    /* width: 4rem; */
+    /* min-width: 4rem; */
+    /* padding: 1.25em 1.625em; */
+    /* padding: 3em 1.625em; */
+    /* padding: 40px; */
   }
 
   .footer-forgotpwd {

@@ -74,9 +74,9 @@ class Login extends React.Component{
             </div>
             </div>
         
-    <div className="footer-login">
+    {/* <div className="footer-login">
 
-    </div>
+    </div> */}
             </div>
         )
     }

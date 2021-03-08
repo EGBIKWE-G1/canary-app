@@ -37,7 +37,7 @@ class Forgotpwd extends React.Component{
                 </div>
                 
                 <Link to="/login">
-                <div>
+                <div className="button-head">
                 <input className="button" type="submit" value="Reset" />
                 </div>
                 </Link>
@@ -60,9 +60,9 @@ class Forgotpwd extends React.Component{
         <br />
         
          {/* <hr /> */}
-    <div className="footer-forgotpwd">
+    {/* <div className="footer-forgotpwd">
 
-    </div>
+    </div> */}
         </div>
         )
     }
