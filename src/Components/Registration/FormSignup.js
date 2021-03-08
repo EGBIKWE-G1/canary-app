@@ -110,7 +110,6 @@ const FormSignup = ({ submitForm }) => {
 
 
   
-
         <Link to="/login">
           <button className="form-input-btn" type="submit">
             Register

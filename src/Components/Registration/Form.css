@@ -179,7 +179,6 @@ form .content input {
 form .content label {
   color: #262626;
   user-select: none;
-  padding-left: -20px;
 }
 
 form .signup-link {
@@ -212,6 +211,6 @@ form .signup-link a {
     left: -1rem;
   }
   form .content .checkbox {
-    margin-left: -10px;
+    margin-left: 30px;
   }
 }
