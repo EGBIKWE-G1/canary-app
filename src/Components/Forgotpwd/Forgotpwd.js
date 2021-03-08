@@ -35,7 +35,7 @@ class Forgotpwd extends React.Component{
                 <label htmlfor="email">Enter a registered email</label>
                 <input className="input-head" type='email' name='email' placeholder='mail@mail.com' required onChange={this.handleChange}/>
                 </div>
-                
+            
                 <Link to="/login">
                 <div className="button-head">
                 <input className="button" type="submit" value="Reset" />

@@ -152,7 +152,6 @@ label {
 .footer-login {
   height: 5vh;
   background: #20b8eb;
-  padding: 4% 14rem;
   width: 100%;
   margin-top: 7.3px;
 }
@@ -160,7 +159,7 @@ label {
 @media only screen and (max-width: 540px) {
   .company-logo {
     position: relative;
-    left: 2.8rem;
+    left: 2.7rem;
   }
 
   .login__header {
