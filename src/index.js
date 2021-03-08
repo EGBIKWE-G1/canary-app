@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 
 ReactDOM.render(
-<BrowserRouter basename='/CanaryPoint'>
+<BrowserRouter basename='/CanaryPoint/Godwin'>
 <App/>
 </BrowserRouter>, document.getElementById('root'));
 

@@ -161,6 +161,17 @@ label {
     position: relative;
     left: -1rem;
   }
+
+  .canary-head {
+    font-family: "Varela Round", sans-serif;
+    background-image: url("../../assets/Ovall.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding: 8vmin;
+    width: 530px;
+  }
+
   .login__header {
     background-color: #fff;
     border-top-left-radius: 1.25em;
@@ -177,7 +188,7 @@ label {
     padding: 10px;
     min-width: none;
     position: relative;
-    /* left: 10px; */
+    left: -27px;
     top: -2rem;
     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.1);
   }

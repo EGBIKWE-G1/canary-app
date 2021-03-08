@@ -140,6 +140,8 @@ label {
       Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
       "Segoe UI Symbol", sans-serif;
     /* width: 400px; */
+    position: relative;
+    left: -27px;
     width: 350px;
     height: 370px;
     margin: 0 auto;
