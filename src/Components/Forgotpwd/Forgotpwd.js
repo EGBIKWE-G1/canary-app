@@ -60,9 +60,9 @@ class Forgotpwd extends React.Component{
         <br />
         
          {/* <hr /> */}
-    {/* <div className="footer-forgotpwd">
+    <div className="footer-forgotpwd">
 
-    </div> */}
+    </div>
         </div>
         )
     }
