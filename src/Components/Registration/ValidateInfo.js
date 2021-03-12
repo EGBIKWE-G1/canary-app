@@ -1,27 +1,32 @@
-export default function validateInfo(values) {   
-  const errors = {};
+const validation = (values) => {
+  let errors = {};
 
-  if (!values.username.trim()) {
-    errors.username = "Username required";
-  } else if (!/^[A-Za-z]+/.test(values.username.trim())) {
-    errors.name = "Enter a valid name";
+  if (!values.firstName) {
+    errors.firstName = "First Name is required";
   }
-
   if (!values.email) {
-    errors.email = "Email required";
-  } else if (!/\S+@\S+\.\S+/.test(values.email)) {
-    errors.email = "Email address is invalid";
+    errors.email = "Email is required";
+  } else if (!/\S+\.\S+/.test(values.email)) {
+    errors.email = "Email is invalid";
   }
-  if (!values.password) {
-    errors.password = "Password is required";
-  } else if (values.password.length < 6) {
-    errors.password = "Password needs to be 6 characters or more";
+  if (!values.password1) {
+    errors.password1 = "Password is required.";
+  } else if (values.password1.length < 5) {
+    errors.password1 = "Password must be more than five characters.";
+  }
+  if (!values.confirmPassword) {
+    errors.confirmPassword = "Password is required";
+  } else if (values.confirmPassword !== values.password1) {
+    errors.confirmPassword = "Passwords do not match";
+  }
+  if (!values.phoneNumber) {
+    errors.phoneNumber = "Phone-number is required";
+  }
+  if (!values.lastName) {
+    errors.lastName = "Last Name is required";
   }
 
-  if (!values.password2) {
-    errors.password2 = "Password is required";
-  } else if (values.password2 !== values.password) {
-    errors.password2 = "Passwords do not match";
-  }
   return errors;
-}
+};
+
+export default validation;

@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import "./Form.css";
 import FormSignup from "./FormSignup";
 // import FormSignup from "../Registration/FormSignup";
-import FormSuccess from "./FormSuccess";
-// import FormSuccess from "../Registration/FormSuccess";
-
-
+// import FormSuccess from "./FormSuccess";
 
 const Form = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -24,11 +21,7 @@ const Form = () => {
             alt="community"
           />
         </div> */}
-        {!isSubmitted ? (
-          <FormSignup submitForm={submitForm} />
-        ) : (
-          <FormSuccess />
-        )}
+        <FormSignup submitForm={submitForm} />
       </div>
     </>
   );

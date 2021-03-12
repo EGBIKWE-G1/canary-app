@@ -1,18 +1,17 @@
 import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
-
-const useForm = (callback, validate) => {
+const useForm = (validates) => {
   const [values, setValues] = useState({
-    organisationname: "",
-    username: "",
+    firstName: "",
+    lastName: "",
     email: "",
-    contact: "",
-    password: "",
-    password2: "",
+    password1: "",
+    confirmPassword: "",
+    phoneNumber: "",
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setValues({
@@ -20,19 +19,47 @@ const useForm = (callback, validate) => {
       [name]: value,
     });
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setErrors(validate(values));
+
+  const history = useHistory();
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    //handling errors
+    setErrors(validates(values));
     setIsSubmitting(true);
+    //Setting input to initiial state
   };
+
   useEffect(() => {
+    /// check to see if there are no errors
+    // and if there are no errors  then i called my fetch function
     if (Object.keys(errors).length === 0 && isSubmitting) {
-      callback();
+      fetch("https://mnte.herokuapp.com/api/v1/users/signup", {
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.status === "success") {
+            history.push("/Signupflow");
+            const token = data.accessToken;
+            console.log(token);
+            localStorage.setItem("token", token);
+          } else {
+            alert("There is an error");
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
     }
-  });
+  }, [errors, values, isSubmitting, history]);
+
   return {
     handleChange,
-    handleSubmit,
+    handleFormSubmit,
     values,
     errors,
   };
