@@ -12,14 +12,16 @@ const useForm = (validates) => {
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [agreeToTerms, setAgreeToTerms] = useState(true);
   const handleChange = (e) => {
     const { name, value } = e.target;
+    setAgreeToTerms(!agreeToTerms);
     setValues({
       ...values,
+      agreeToTerms,
       [name]: value,
     });
   };
-
   const history = useHistory();
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -27,6 +29,7 @@ const useForm = (validates) => {
     setErrors(validates(values));
     setIsSubmitting(true);
     //Setting input to initiial state
+    console.log(values);
   };
 
   useEffect(() => {
@@ -55,13 +58,15 @@ const useForm = (validates) => {
           console.error("Error:", error);
         });
     }
-  }, [errors, values, isSubmitting, history]);
-
+    // eslint-disable-next-line
+  }, [errors]);
+  // eslint-disable-next-line
   return {
     handleChange,
     handleFormSubmit,
     values,
     errors,
+    agreeToTerms,
   };
 };
 export default useForm;
